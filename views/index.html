@@ -1,0 +1,76 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A cstock screener made with Glitch" />
+
+    <title>Stock Price checker</title>
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's client-side javascript file but defer it-->
+   <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Stock Price checker</h1>
+    </header>
+
+    <main>
+      
+      <section id="open-hours">
+        <h2>Opening hours</h2>
+        <p>Is the New York stock exchange open now?
+        <span id="statusLabel">
+          Hmm...
+        </span>
+        </p>
+        <p>Next open NY, USA (GMT-5):</p>
+        <div id="calendar">
+          <div>Date: <span id="date"></span></div>
+          <div>Open: <span id="open"></span></div>
+          <div>Close: <span id="close"></span></div>
+          <div>Session open: <span id="session-open"></span></div>
+          <div>Session close: <span id="session-close"></span></div>
+         </div>
+      </section>
+
+      <form>
+        <label>
+          Get prices for the last 5 trading days
+          <input
+            name="ticker"
+            type="text"
+            maxlength="100"
+            required
+            autocomplete="off"
+            placeholder="Ticker!"
+          />
+        </label>
+        <button type="submit" id="submit-ticker">Submit Ticker</button>
+      </form>
+
+      <section class="results">
+        <h2 id="tickerlabel"></h2>
+        <ul id="results">
+         
+        </ul>
+      </section>
+    </main>
+
+
+    <footer></footer>
+ 
+  </body>
+</html>
